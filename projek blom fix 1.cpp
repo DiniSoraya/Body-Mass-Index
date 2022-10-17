@@ -19,7 +19,7 @@ void tampilkan (float bmi)
 	else if (bmi>= 25.0 && bmi<=29.9)
 	{
 		cout<<"Kategori berat badan \t: kelebihan berat badan   "<<endl;
-	}
+	
 	else
 		cout<<"Kategori berat badan \t: Obesitas "<<endl;
 	}
@@ -36,23 +36,22 @@ int main ()
 	cout<<"----------------------------------------------------"<<endl;	
 	for (int i=0; i<orang; i++)
 	{
-		cout<<"Nama : ";
+		cout<<"Nama \t\t\t: ";
 		cin.ignore();
 		getline (cin, nama[i]);
-		cout<<"Tinggi (m) : ";
+		cout<<"Tinggi (m) \t\t: ";
 		cin >> tinggi;
 		
-		cout << "Berat (Kg) : ";
+		cout << "Berat (Kg) \t\t: ";
 		cin >> berat;
-		
-		bmi = hitungBMI (tinggi, berat);
-		tampilkan (bmi);
-		
-		if (bmi>tertinggi)
-			tertinggi = bmi;
-		if (bmi<terendah)
-			terendah =bmi;
-		totalBMI = totalBMI + bmi;
+                cout << "Nilai BMI \t\t: "<<hitungBMI (tinggi, berat)<<endl;
+                hasil = hitungBMI (tinggi, berat);
+                Tampilkan (hasil);
+		if (hasil>tertinggi)
+                    Tertinggi = hasil;
+                if (hasil<terendah)
+                   Terendah = hasil;
+                totalBMI = totalBMI + hasil; 
 	cout<<"----------------------------------------------------"<<endl;
 	}
 	float rata = totalBMI/orang;
