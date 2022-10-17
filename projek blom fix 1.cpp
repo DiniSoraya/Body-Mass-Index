@@ -6,7 +6,7 @@ float hitungBMI (float tinggi, float berat)
 	float bmi = berat/(tinggi*tinggi);
 	return bmi;
 }
-void display (float bmi)
+void tampilkan (float bmi)
 {
 	if (bmi<18.5) 
 	{
@@ -46,7 +46,7 @@ int main ()
 		cin >> berat;
 		
 		bmi = hitungBMI (tinggi, berat);
-		display (bmi);
+		tampilkan (bmi);
 		
 		if (bmi>tertinggi)
 			tertinggi = bmi;
