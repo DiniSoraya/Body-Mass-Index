@@ -10,18 +10,18 @@ void display (float bmi)
 {
 	if (bmi<18.5) 
 	{
-		cout<<"Status nutrisi : Berat badan kurang "<<endl;
+		cout<<" Kategori berat badan : Berat badan kurang "<<endl;
 	}	
 	else if (bmi>=18.5 && bmi<=24.9)
 	{
-		cout<<"Status nutrisi : Berat badan normal "<<endl;
+		cout<<"Kategori berat badan : Berat badan normal "<<endl;
 	}
 	else if (bmi>= 25.0 && bmi<=29.9)
 	{
-		cout<<"Status nutrisi : Pra-obesitas "<<endl;
+		cout<<"Kategori berat badan : Pra-obesitas "<<endl;
 	}
 	else
-		cout<<"Status nutrisi: Obesitas "<<endl;
+		cout<<"Kategori berat badan: Obesitas "<<endl;
 	}
 
 int main ()
