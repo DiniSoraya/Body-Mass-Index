@@ -44,7 +44,7 @@ int main ()
 	float tinggi, berat, hasil;
 	int orang;
 	string nama [10];
-	float tertinggi = 0, terendah =100, totalBMI = 0;
+	float tertinggi = 0, terendah =100, totalBMI;
 	header ();
 	cout<<"Masukkan jumlah anggota grup  : ";
 	cin>> orang;
@@ -66,7 +66,7 @@ int main ()
                     tertinggi = hasil;
                 if (hasil<terendah)
                    terendah = hasil;
-                totalBMI = totalBMI + hasil; 
+                totalBMI += hasil; 
 	cout<<"----------------------------------------------------"<<endl;
 	}
 	float rata = totalBMI/orang; //menghitung rata-rata
