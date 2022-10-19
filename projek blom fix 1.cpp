@@ -1,11 +1,26 @@
 #include <iostream>
 using namespace std;
 
+void header() {
+
+cout << 
+" _______  _______  ______   __   __    __   __  _______  _______  _______    ___   __    _  ______   _______  __   __ \n"
+"|  _    ||       ||      | |  | |  |  |  |_|  ||   _   ||       ||       |  |   | |  |  | ||      | |       ||  |_|  |\n"
+"| |_|   ||   _   ||  _    ||  |_|  |  |       ||  |_|  ||  _____||  _____|  |   | |   |_| ||  _    ||    ___||       |\n"
+"|       ||  | |  || | |   ||       |  |       ||       || |_____ | |_____   |   | |       || | |   ||   |___ |       |\n"
+"|  _   | |  |_|  || |_|   ||_     _|  |       ||       ||_____  ||_____  |  |   | |  _    || |_|   ||    ___| |     | \n"
+"| |_|   ||       ||       |  |   |    | ||_|| ||   _   | _____| | _____| |  |   | | | |   ||       ||   |___ |   _   |\n"
+"|_______||_______||______|   |___|    |_|   |_||__| |__||_______||_______|  |___| |_|  |__||______| |_______||__| |__|\n"<<endl;
+cout<<"Selamat datang di program kalkulator BMI, Indeks massa tubuh (BMI) adalah berat badan seseorang dalam kilogram dibagi \ndengan kuadrat tinggi badan dalam meter. BMI adalah metode skrining yang murah dan mudah untuk menentukan kategori \nberat badan (kurus, berat badan sehat, kelebihan berat badan, dan obesitas)."<<endl;
+cout<<"\nPada program ini Anda dapat menghitung nilai BMI, mengetahui kategori berat badan Anda berdasarkan nilai BMI, dan juga \nmenghitung rata-rata nilai BMI; menentukan nilai BMI tertinggi; dan menentukan nilai BMI terendah dalam sebuah grup."<<endl<<endl;                                                                                                                                                                                                                                                                                  
+}
+// Fungsi menghitung BMI
 float hitungBMI (float tinggi, float berat)
 {
 	float bmi = berat/(tinggi*tinggi);
 	return bmi;
 }
+//Prosedur menampilkan status nutrisi
 void tampilkan (float bmi)
 {
 	if (bmi<18.5) 
@@ -19,19 +34,19 @@ void tampilkan (float bmi)
 	else if (bmi>= 25.0 && bmi<=29.9)
 	{
 		cout<<"Kategori berat badan \t: kelebihan berat badan   "<<endl;
-	
+	}
 	else
 		cout<<"Kategori berat badan \t: Obesitas "<<endl;
 	}
 
 int main ()
 {
-	float tinggi, berat, bmi;
+	float tinggi, berat, hasil;
 	int orang;
 	string nama [10];
 	float tertinggi = 0, terendah =100, totalBMI = 0;
-	
-	cout<<"Masukkan Jumlah Orang : ";
+	header ();
+	cout<<"Masukkan jumlah anggota grup  : ";
 	cin>> orang;
 	cout<<"----------------------------------------------------"<<endl;	
 	for (int i=0; i<orang; i++)
@@ -42,23 +57,25 @@ int main ()
 		cout<<"Tinggi (m) \t\t: ";
 		cin >> tinggi;
 		
-		cout << "Berat (Kg) \t\t: ";
+		cout << "Berat (kg) \t\t: ";
 		cin >> berat;
-                cout << "Nilai BMI \t\t: "<<hitungBMI (tinggi, berat)<<endl;
+                cout << "Nilai BMI \t\t: "<<hitungBMI (tinggi, berat)<<endl; //Memanggil fungsi hitungBMI	
                 hasil = hitungBMI (tinggi, berat);
-                Tampilkan (hasil);
+                tampilkan (hasil); //Memanggil prosedur status nutrisi
 		if (hasil>tertinggi)
-                    Tertinggi = hasil;
+                    tertinggi = hasil;
                 if (hasil<terendah)
-                   Terendah = hasil;
+                   terendah = hasil;
                 totalBMI = totalBMI + hasil; 
 	cout<<"----------------------------------------------------"<<endl;
 	}
-	float rata = totalBMI/orang;
+	float rata = totalBMI/orang; //menghitung rata-rata
 	cout <<endl;
-	cout <<"Rata-rata nilai BMI dari "; for (int i=0; i<10; i++)  {
-	    cout<<nama [i]<<" , ";
-	}
-	cout<<" adalah " <<rata<< ", nilai BMI tertinggi dari meraka adalah " <<tertinggi<<", dan nilai BMI terendah dari mereka adalah " <<terendah<< endl;
+	cout <<"Nama-nama anggota grup yang terdata : \n";
+	for (int i=0; i<orang; i++){
+	    cout<<" * "<<nama [i]<<endl;}
+	cout<<"Rata-rata nilai BMI \t: "<<rata<<endl;
+	cout<<"Nilai BMI tertinggi \t: " <<tertinggi<<endl; 
+	cout<<"Nilai BMI terendah \t: " <<terendah<< endl;
 	return 0;
 }
