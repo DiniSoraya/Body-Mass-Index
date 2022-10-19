@@ -1,4 +1,8 @@
 #include <iostream>
+//Nama anggota kelompok 7:
+//1.Dian prinatama silaban 2217051137
+//2.Dini soraya 2217051107
+//3.Fara alif lailla 2217051153
 using namespace std;
 
 void header() {
