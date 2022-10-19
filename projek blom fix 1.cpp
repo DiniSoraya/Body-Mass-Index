@@ -25,7 +25,7 @@ void tampilkan (float bmi)
 {
 	if (bmi<18.5) 
 	{
-		cout<<"Kategori berat badan \t: kurus"<<endl;
+		cout<<"Kategori berat badan \t: Kurus"<<endl;
 	}	
 	else if (bmi>=18.5 && bmi<=24.9)
 	{
@@ -33,7 +33,7 @@ void tampilkan (float bmi)
 	}
 	else if (bmi>= 25.0 && bmi<=29.9)
 	{
-		cout<<"Kategori berat badan \t: kelebihan berat badan"<<endl;
+		cout<<"Kategori berat badan \t: Kelebihan berat badan"<<endl;
 	}
 	else
 		cout<<"Kategori berat badan \t: Obesitas"<<endl;
