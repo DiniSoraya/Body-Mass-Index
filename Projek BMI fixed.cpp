@@ -1,10 +1,9 @@
 #include <iostream>
-//Nama anggota kelompok 7:
-//1.Dian prinatama silaban 2217051137
-//2.Dini soraya 2217051107
-//3.Fara alif lailla 2217051153
 using namespace std;
-
+//Nama anggota kelompok 7 :
+//1. Dian Prinatama Silaban 2217051137
+//2. Dini Soraya 2217051107
+//3. Fara Alif Laila 2217051153
 void header() {
 cout << 
 " _______  _______  ______   __   __    __   __  _______  _______  _______    ___   __    _  ______   _______  __   __ \n"
