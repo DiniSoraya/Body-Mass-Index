@@ -41,14 +41,14 @@ void tampilkan (float bmi)
 int main ()
 {
 	float tinggi, berat, hasil;
-	int orang;
+	int jumlah_anggota;
 	string nama [10];
 	float tertinggi = 0, terendah =100, totalBMI;
 	header ();
 	cout<<"Masukkan jumlah anggota grup  : ";
-	cin>> orang;
+	cin>> jumlah_anggota;
 	cout<<"----------------------------------------------------"<<endl;	
-	for (int i=0; i<orang; i++)
+	for (int i=0; i<jumlah_anggota; i++)
 	{
 		cout<<"Nama \t\t\t: ";
 		cin.ignore();
@@ -68,10 +68,10 @@ int main ()
                 totalBMI += hasil; 
 	cout<<"----------------------------------------------------"<<endl;
 	}
-	float rata = totalBMI/orang; //menghitung rata-rata
+	float rata = totalBMI/jumlah_anggota; //menghitung rata-rata
 	cout <<endl;
 	cout <<"Nama-nama anggota grup yang terdata : \n";
-	for (int i=0; i<orang; i++){
+	for (int i=0; i<jumlah_anggota; i++){
 	    cout<<" * "<<nama [i]<<endl;}
 	cout<<"Rata-rata nilai BMI \t: "<<rata<<endl;
 	cout<<"Nilai BMI tertinggi \t: " <<tertinggi<<endl; 
