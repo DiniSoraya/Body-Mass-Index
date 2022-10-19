@@ -22,7 +22,7 @@ float hitungBMI (float tinggi, float berat)
 	float bmi = berat/(tinggi*tinggi);
 	return bmi;
 }
-//Prosedur menampilkan status nutrisi
+//Prosedur menampilkan kategori berat badan
 void tampilkan (float bmi)
 {
 	if (bmi<18.5) 
@@ -46,7 +46,7 @@ int main ()
 	float tinggi, berat, hasil;
 	int jumlah_anggota;
 	string nama [10];
-	float tertinggi = 0, terendah =100, totalBMI;
+	float tertinggi = 0, terendah =100, totalBMI=0;
 	header ();
 	cout<<"Masukkan jumlah anggota grup  : ";
 	cin>> jumlah_anggota;
@@ -63,12 +63,12 @@ int main ()
 		cin >> berat;
                 cout << "Nilai BMI \t\t: "<<hitungBMI (tinggi, berat)<<endl; //Memanggil fungsi hitungBMI	
                 hasil = hitungBMI (tinggi, berat);
-                tampilkan (hasil); //Memanggil prosedur status nutrisi
+                tampilkan (hasil); //Memanggil prosedur berat badan
 		if (hasil>tertinggi)
                     tertinggi = hasil;
                 if (hasil<terendah)
                    terendah = hasil;
-                totalBMI += hasil; 
+                totalBMI = totalBMI + hasil; 
 	cout<<"----------------------------------------------------"<<endl;
 	}
 	float rata = totalBMI/jumlah_anggota; //menghitung rata-rata
